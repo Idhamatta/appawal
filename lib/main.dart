@@ -16,33 +16,35 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.deepPurple[100],
-        appBar: AppBar(
-          title: Text(
-            "GATAU MAU BIKIN APA",
-          ),
-          centerTitle: true,
-          backgroundColor: Colors.deepPurple[400],
-          elevation: 0,
-          leading: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.menu),
-          ),
-          actions: [
-            IconButton(
+          backgroundColor: Colors.deepPurple[100],
+          appBar: AppBar(
+            title: Text(
+              "GATAU MAU BIKIN APA",
+            ),
+            centerTitle: true,
+            backgroundColor: Colors.deepPurple[400],
+            elevation: 0,
+            leading: IconButton(
               onPressed: () {},
-              icon: Icon(Icons.logout),
-            )
-          ],
-        ),
-        body: Center(
-            child: ListView.builder(
-          itemCount: names.length,
-          itemBuilder: (context, index) => ListTile(
-            title: Text(names[index]),
+              icon: Icon(Icons.menu),
+            ),
+            actions: [
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.logout),
+              )
+            ],
           ),
-        )),
-      ),
+          body: Center(
+              child: GridView.builder(
+            itemCount: 64,
+            gridDelegate:
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 8),
+            itemBuilder: (context, index) => Container(
+              color: Colors.deepPurple,
+              margin: EdgeInsets.all(2),
+            ),
+          ))),
     );
   }
 }
