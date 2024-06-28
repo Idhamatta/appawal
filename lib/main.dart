@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:appawal/pages/first_page.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -7,44 +8,13 @@ void main(List<String> args) {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
-  List names = ["Idham", "Atta", "Rodrik"];
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-          backgroundColor: Colors.deepPurple[100],
-          appBar: AppBar(
-            title: Text(
-              "GATAU MAU BIKIN APA",
-            ),
-            centerTitle: true,
-            backgroundColor: Colors.deepPurple[400],
-            elevation: 0,
-            leading: IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.menu),
-            ),
-            actions: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.logout),
-              )
-            ],
-          ),
-          body: Center(
-              child: GridView.builder(
-            itemCount: 64,
-            gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 8),
-            itemBuilder: (context, index) => Container(
-              color: Colors.deepPurple,
-              margin: EdgeInsets.all(2),
-            ),
-          ))),
+      home: FirstPage(),
     );
   }
 }
