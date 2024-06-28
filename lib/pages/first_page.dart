@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
+import 'package:appawal/pages/second_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {}
@@ -10,17 +13,23 @@ class FirstPage extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          backgroundColor: Colors.deepPurple[100],
           appBar: AppBar(
-            title: const Text("Home"),
-            backgroundColor: Colors.purple[200],
+            title: Text('Home'),
             centerTitle: true,
           ),
-          body: Center(
-              child: ElevatedButton(
-            child: Text('Klik to go to second page'),
-            onPressed: () {},
-          )),
+          drawer: Drawer(
+            backgroundColor: Colors.deepPurple[100],
+            child: Column(
+              children: [
+                //Common to place a drawer header here
+                DrawerHeader(
+                    child: Icon(
+                  Icons.favorite_border,
+                  size: 48,
+                ))
+              ],
+            ),
+          ),
         ));
   }
 }
