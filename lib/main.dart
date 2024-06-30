@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:appawal/pages/first_page.dart';
 import 'package:appawal/pages/home_page.dart';
+import 'package:appawal/pages/profile_page.dart';
 import 'package:appawal/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/firstpage': (context) => FirstPage(),
         '/homepage': (context) => HomePage(),
         '/settingspage': (context) => SettingsPage(),
+        '/profilepage': (context) => ProfilePage(),
       },
     );
   }

@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 void main(List<String> args) {}
 
-class SettingsPage extends StatelessWidget {
-  const SettingsPage({super.key});
+class ProfilePage extends StatelessWidget {
+  ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[300],
+      backgroundColor: Colors.deepPurple[200],
       body: Center(
-        child: Text('Settings Page'),
+        child: Text('Profile Page'),
       ),
     );
   }

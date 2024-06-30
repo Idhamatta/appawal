@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {}
@@ -8,18 +10,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.amber[200],
-          title: const Text('Home'),
-          centerTitle: true,
-        ),
-        backgroundColor: Colors.amberAccent,
-        body: Center(
-          child: Container(
-            color: Colors.deepOrangeAccent,
-            width: 200,
-            height: 200,
-          ),
-        ));
+      backgroundColor: Colors.deepPurple[100],
+      body: Center(
+        child: Text('Home Page'),
+      ),
+    );
   }
 }
